@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login de Acesso</title>
+</head>
+<body>
+    <h1>Login para Acesso ao Formulário</h1>
+    <p>Digite a senha para acessar o conteúdo.</p>
+
+    <!-- Formulário de Login -->
+    <form id="loginForm">
+        <label for="senha">Digite a senha:</label>
+        <input type="password" id="senha" name="senha" required>
+        <button type="submit">Entrar</button>
+    </form>
+
+    <script>
+        // Função que verifica a senha e redireciona
+        const form = document.getElementById("loginForm");
+        form.onsubmit = function (e) {
+            e.preventDefault(); // Impede o envio do formulário
+
+            // Senha que você vai usar
+            const senhaCorreta = "TRABALHO123"; // Substitua por sua senha
+            const senha = document.getElementById("senha").value;
+
+            // Verifica se a senha está correta
+            if (senha === senhaCorreta) {
+                // Redireciona para o link do Google Form ou GitHub Pages
+                window.location.href = "LINK_DO_SEU_FORMULARIO"; // Substitua com o link correto
+            } else {
+                alert("Senha incorreta! Tente novamente.");
+            }
+        };
+    </script>
+</body>
+</html>
